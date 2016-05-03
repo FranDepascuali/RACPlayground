@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F81004621CD9297C001CE119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81004611CD9297C001CE119 /* AppDelegate.swift */; };
+		F81004641CD9297C001CE119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81004631CD9297C001CE119 /* ViewController.swift */; };
+		F81004671CD9297C001CE119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F81004651CD9297C001CE119 /* Main.storyboard */; };
+		F81004691CD9297C001CE119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81004681CD9297C001CE119 /* Assets.xcassets */; };
+		F810046C1CD9297C001CE119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F810046A1CD9297C001CE119 /* LaunchScreen.storyboard */; };
+		F810048D1CD92E3A001CE119 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81004841CD92C58001CE119 /* ReactiveCocoa.framework */; };
+		F81004AB1CD92E79001CE119 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F810049E1CD92E6C001CE119 /* Result.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F810047F1CD92C58001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725EA19E49ED7006002AA;
+			remoteInfo = "ReactiveCocoa-Mac";
+		};
+		F81004811CD92C58001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725F519E49ED7006002AA;
+			remoteInfo = "ReactiveCocoa-MacTests";
+		};
+		F81004831CD92C58001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047260C19E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		F81004851CD92C58001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047261619E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOSTests";
+		};
+		F81004871CD92C58001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9B315541B3940610001CB9C;
+			remoteInfo = "ReactiveCocoa-watchOS";
+		};
+		F81004891CD92C58001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57A4D2411BA13D7A00F7D4B1;
+			remoteInfo = "ReactiveCocoa-tvOS";
+		};
+		F810048B1CD92D5F001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D047260B19E49F82006002AA;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		F81004991CD92E6C001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480571A9572F5009D7229;
+			remoteInfo = "Result-Mac";
+		};
+		F810049B1CD92E6C001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480671A9572F5009D7229;
+			remoteInfo = "Result-MacTests";
+		};
+		F810049D1CD92E6C001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D454807D1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
+		F810049F1CD92E6C001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D45480871A957362009D7229;
+			remoteInfo = "Result-iOSTests";
+		};
+		F81004A11CD92E6C001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE471BA280DC00130C48;
+			remoteInfo = "Result-tvOS";
+		};
+		F81004A31CD92E6C001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57FCDE541BA280E000130C48;
+			remoteInfo = "Result-tvOSTests";
+		};
+		F81004A51CD92E6C001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579A31B2B788F005D26AE;
+			remoteInfo = "Result-watchOS";
+		};
+		F81004A71CD92E6C001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D03579B01B2B78A1005D26AE;
+			remoteInfo = "Result-watchOSTests";
+		};
+		F81004A91CD92E73001CE119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D454807C1A957361009D7229;
+			remoteInfo = "Result-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F810045E1CD9297C001CE119 /* RACPlaygroundProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACPlaygroundProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81004611CD9297C001CE119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F81004631CD9297C001CE119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F81004661CD9297C001CE119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F81004681CD9297C001CE119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F810046B1CD9297C001CE119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F810046D1CD9297C001CE119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F81004731CD92BCE001CE119 /* RACPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RACPlayground.playground; sourceTree = "<group>"; };
+		F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F810048E1CD92E6B001CE119 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F810045B1CD9297C001CE119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81004AB1CD92E79001CE119 /* Result.framework in Frameworks */,
+				F810048D1CD92E3A001CE119 /* ReactiveCocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F81004551CD9297C001CE119 = {
+			isa = PBXGroup;
+			children = (
+				F81004601CD9297C001CE119 /* RACPlaygroundProject */,
+				F810045F1CD9297C001CE119 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F810045F1CD9297C001CE119 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F810045E1CD9297C001CE119 /* RACPlaygroundProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F81004601CD9297C001CE119 /* RACPlaygroundProject */ = {
+			isa = PBXGroup;
+			children = (
+				F810048E1CD92E6B001CE119 /* Result.xcodeproj */,
+				F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */,
+				F81004611CD9297C001CE119 /* AppDelegate.swift */,
+				F81004631CD9297C001CE119 /* ViewController.swift */,
+				F81004651CD9297C001CE119 /* Main.storyboard */,
+				F81004681CD9297C001CE119 /* Assets.xcassets */,
+				F810046A1CD9297C001CE119 /* LaunchScreen.storyboard */,
+				F810046D1CD9297C001CE119 /* Info.plist */,
+				F81004731CD92BCE001CE119 /* RACPlayground.playground */,
+			);
+			path = RACPlaygroundProject;
+			sourceTree = "<group>";
+		};
+		F81004771CD92C58001CE119 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F81004801CD92C58001CE119 /* ReactiveCocoa.framework */,
+				F81004821CD92C58001CE119 /* ReactiveCocoaTests.xctest */,
+				F81004841CD92C58001CE119 /* ReactiveCocoa.framework */,
+				F81004861CD92C58001CE119 /* ReactiveCocoaTests.xctest */,
+				F81004881CD92C58001CE119 /* ReactiveCocoa.framework */,
+				F810048A1CD92C58001CE119 /* ReactiveCocoa.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F810048F1CD92E6B001CE119 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F810049A1CD92E6C001CE119 /* Result.framework */,
+				F810049C1CD92E6C001CE119 /* Result-MacTests.xctest */,
+				F810049E1CD92E6C001CE119 /* Result.framework */,
+				F81004A01CD92E6C001CE119 /* Result-iOSTests.xctest */,
+				F81004A21CD92E6C001CE119 /* Result.framework */,
+				F81004A41CD92E6C001CE119 /* Result-tvOSTests.xctest */,
+				F81004A61CD92E6C001CE119 /* Result.framework */,
+				F81004A81CD92E6C001CE119 /* Result-watchOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F810045D1CD9297C001CE119 /* RACPlaygroundProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F81004701CD9297C001CE119 /* Build configuration list for PBXNativeTarget "RACPlaygroundProject" */;
+			buildPhases = (
+				F810045A1CD9297C001CE119 /* Sources */,
+				F810045B1CD9297C001CE119 /* Frameworks */,
+				F810045C1CD9297C001CE119 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F81004AA1CD92E73001CE119 /* PBXTargetDependency */,
+				F810048C1CD92D5F001CE119 /* PBXTargetDependency */,
+			);
+			name = RACPlaygroundProject;
+			productName = RACPlaygroundProject;
+			productReference = F810045E1CD9297C001CE119 /* RACPlaygroundProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F81004561CD9297C001CE119 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = FD;
+				TargetAttributes = {
+					F810045D1CD9297C001CE119 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = F81004591CD9297C001CE119 /* Build configuration list for PBXProject "RACPlaygroundProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F81004551CD9297C001CE119;
+			productRefGroup = F810045F1CD9297C001CE119 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F81004771CD92C58001CE119 /* Products */;
+					ProjectRef = F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */;
+				},
+				{
+					ProductGroup = F810048F1CD92E6B001CE119 /* Products */;
+					ProjectRef = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F810045D1CD9297C001CE119 /* RACPlaygroundProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F81004801CD92C58001CE119 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = F810047F1CD92C58001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004821CD92C58001CE119 /* ReactiveCocoaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveCocoaTests.xctest;
+			remoteRef = F81004811CD92C58001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004841CD92C58001CE119 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = F81004831CD92C58001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004861CD92C58001CE119 /* ReactiveCocoaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveCocoaTests.xctest;
+			remoteRef = F81004851CD92C58001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004881CD92C58001CE119 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = F81004871CD92C58001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F810048A1CD92C58001CE119 /* ReactiveCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveCocoa.framework;
+			remoteRef = F81004891CD92C58001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F810049A1CD92E6C001CE119 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = F81004991CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F810049C1CD92E6C001CE119 /* Result-MacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-MacTests.xctest";
+			remoteRef = F810049B1CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F810049E1CD92E6C001CE119 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = F810049D1CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004A01CD92E6C001CE119 /* Result-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-iOSTests.xctest";
+			remoteRef = F810049F1CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004A21CD92E6C001CE119 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = F81004A11CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004A41CD92E6C001CE119 /* Result-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-tvOSTests.xctest";
+			remoteRef = F81004A31CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004A61CD92E6C001CE119 /* Result.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Result.framework;
+			remoteRef = F81004A51CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F81004A81CD92E6C001CE119 /* Result-watchOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Result-watchOSTests.xctest";
+			remoteRef = F81004A71CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F810045C1CD9297C001CE119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F810046C1CD9297C001CE119 /* LaunchScreen.storyboard in Resources */,
+				F81004691CD9297C001CE119 /* Assets.xcassets in Resources */,
+				F81004671CD9297C001CE119 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F810045A1CD9297C001CE119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81004641CD9297C001CE119 /* ViewController.swift in Sources */,
+				F81004621CD9297C001CE119 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F810048C1CD92D5F001CE119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveCocoa-iOS";
+			targetProxy = F810048B1CD92D5F001CE119 /* PBXContainerItemProxy */;
+		};
+		F81004AA1CD92E73001CE119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Result-iOS";
+			targetProxy = F81004A91CD92E73001CE119 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F81004651CD9297C001CE119 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F81004661CD9297C001CE119 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F810046A1CD9297C001CE119 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F810046B1CD9297C001CE119 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F810046E1CD9297C001CE119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F810046F1CD9297C001CE119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F81004711CD9297C001CE119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RACPlaygroundProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FD.RACPlaygroundProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F81004721CD9297C001CE119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RACPlaygroundProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FD.RACPlaygroundProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F81004591CD9297C001CE119 /* Build configuration list for PBXProject "RACPlaygroundProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F810046E1CD9297C001CE119 /* Debug */,
+				F810046F1CD9297C001CE119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F81004701CD9297C001CE119 /* Build configuration list for PBXNativeTarget "RACPlaygroundProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F81004711CD9297C001CE119 /* Debug */,
+				F81004721CD9297C001CE119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F81004561CD9297C001CE119 /* Project object */;
+}
