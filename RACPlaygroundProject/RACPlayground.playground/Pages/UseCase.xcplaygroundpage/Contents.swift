@@ -98,32 +98,32 @@ import ReactiveCocoa
 //: You maybe asking yourself why we used SignalProducer instead of Signal?
 //:
 //: Because with the producer, we decide when to start it. If we have a signal, as soon as we initialize it, it executed the closure. Look at this:
-public final class WrongRACUserRepository {
-    
-    public func signUp(email: String, password: String) -> Signal<User, NSError> {
-        return Signal { observer in
-            MockExternalPersistanceService()
-                .signUp("user@gmail.com", password: "password") { maybeUser, maybeError in
-                    print("Making request...")
-                    if let error = maybeError {
-                        observer.sendFailed(error)
-                    } else if let user = maybeUser {
-                        observer.sendNext(user)
-                        observer.sendCompleted()
-                    }
+    public final class WrongRACUserRepository {
+        
+        public func signUp(email: String, password: String) -> Signal<User, NSError> {
+            return Signal { observer in
+                MockExternalPersistanceService()
+                    .signUp("user@gmail.com", password: "password") { maybeUser, maybeError in
+                        print("Making request...")
+                        if let error = maybeError {
+                            observer.sendFailed(error)
+                        } else if let user = maybeUser {
+                            observer.sendNext(user)
+                            observer.sendCompleted()
+                        }
+                }
+                // Ignore this return
+                return .None
             }
-            // Ignore this return
-            return .None
         }
     }
-}
 
-print("---------------(3)---------------")
+    print("---------------(3)---------------")
 
-let signalSignUp = WrongRACUserRepository().signUp("user@gmail.com", password: "password")
-signalSignUp.observeNext {
-    user in print("user")
-}
+    let signalSignUp = WrongRACUserRepository().signUp("user@gmail.com", password: "password")
+    signalSignUp.observeNext {
+        user in print("user")
+    }
 //: Why didn't it print a value?
 //:
 //: This is because as soon as we called signup, the signal executed the closure that we passed through initialization. When we start observing the signal, it already emitted the value.

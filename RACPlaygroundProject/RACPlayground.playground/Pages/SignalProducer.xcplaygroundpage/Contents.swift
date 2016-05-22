@@ -17,24 +17,24 @@ import ReactiveCocoa
 //:
 //: As with pipe() function of signals before, I now have to use the function buffer() from ***SignalProducers***. It is the same concept, it let us create a ***SignalProducer*** and an observer for sending values through it.
 //:
-print("---------------(6)---------------")
+    print("---------------(6)---------------")
 // buffer() is analogue to pipe().
-let (producer, producerObserver) = SignalProducer<Int, NoError>.buffer(0)
+    let (producer, producerObserver) = SignalProducer<Int, NoError>.buffer(0)
 
 // Note that for producers, it is called startWithNext()
-producer.startWithNext { value in
-    print(value)
-}
-producerObserver.sendNext(7)
-producerObserver.sendNext(11)
+    producer.startWithNext { value in
+        print(value)
+    }
+    producerObserver.sendNext(7)
+    producerObserver.sendNext(11)
 //:
 //: You will see that the producer emitted the values 7 and 11, just like the signal did before.
 //:
-print("---------------(7)---------------")
-producer.startWithNext { _ in
-    print("hello!")
-}
-producerObserver.sendNext(0)
+    print("---------------(7)---------------")
+    producer.startWithNext { _ in
+        print("hello!")
+    }
+    producerObserver.sendNext(0)
 //:
 //: Now it printed the 0 value and the hello!, because we started the producer twice.
 //:

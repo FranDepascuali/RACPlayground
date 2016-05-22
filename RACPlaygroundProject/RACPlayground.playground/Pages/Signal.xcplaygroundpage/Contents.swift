@@ -21,20 +21,20 @@ import ReactiveCocoa
 //:
 //: If I could, I would avoid using pipe() here, but we haven't other way to manually create and control a signal. In a real app, one should avoid creating signal with pipe().
 //:
-let (signal1, observer1) = Signal<Int, NoError>.pipe()
+    let (signal1, observer1) = Signal<Int, NoError>.pipe()
 //: pipe() provides:
 //:* A ***signal***: In this case signal1 which is of type ***Signal<Int, NoError>***, this means that it can emit ***Next*** events with type ***Int***, and ***Failed*** events with type ***NoError***.
 //:* An ***observer***: In this case observer1 which is of type ***Observer<Int, NoError>***. This observer is where we will send an *Int* value and the signal will emit that value.
 //:
 //: Let's see how:
 //:
-print("---------------(1)---------------")
-signal1.observeNext { value in
-    print(value)
-}
-observer1.sendNext(5)
-observer1.sendNext(3)
-observer1.sendNext(7)
+    print("---------------(1)---------------")
+    signal1.observeNext { value in
+        print(value)
+    }
+    observer1.sendNext(5)
+    observer1.sendNext(3)
+    observer1.sendNext(7)
 //:
 //: You should see on the console the values 5,3,7 printed.
 //:
@@ -46,11 +46,11 @@ observer1.sendNext(7)
 //:
 //: We can observe that signal multiple times. Maybe we want to print the value, maybe we want to so something else.
 //:
-print("---------------(2)---------------")
-signal1.observeNext { value in
-    print("plus3: \(value + 3)")
-}
-observer1.sendNext(7)
+    print("---------------(2)---------------")
+    signal1.observeNext { value in
+        print("plus3: \(value + 3)")
+    }
+    observer1.sendNext(7)
 //:
 //: Open the console again. Why did we see 7 and 10? Because we are observing the signal twice: in the first *ObserveNext* we printed the value, in the second one we printed the value + 3.
 //:
@@ -62,14 +62,14 @@ observer1.sendNext(7)
 //:
 //: For example:
 //:
-print("---------------(3)---------------")
-let signal2 = signal1.map { number in "\(number)" }
+    print("---------------(3)---------------")
+    let signal2 = signal1.map { number in "\(number)" }
 //:
 //: Xcode infers the type of signal2, which is ***Signal<String, NoError>***. Now, whenever signal1 emits an int, signal2 will emit a string.
-signal2.observeNext { string in
-    print(string)
-}
-observer1.sendNext(22)
+    signal2.observeNext { string in
+        print(string)
+    }
+    observer1.sendNext(22)
 //: This is a tricky one: It prints
 //:1. 22 for the first observer of ***signal1***.
 //:2. 25 for the second observer of ***signal1***.
@@ -77,14 +77,14 @@ observer1.sendNext(22)
 //:
 //: We can also filter values
 //:
-print("---------------(4)---------------")
-signal1
-    .filter { $0 > 22 }
-    .map { $0 * 2 }
-    .observeNext {
-        print("result: \($0)")
-}
-observer1.sendNext(50)
+    print("---------------(4)---------------")
+    signal1
+        .filter { $0 > 22 }
+        .map { $0 * 2 }
+        .observeNext {
+            print("result: \($0)")
+    }
+    observer1.sendNext(50)
 //:
 //: It prints
 //:1. 50 for the first observer of ***signal1***.
@@ -94,10 +94,10 @@ observer1.sendNext(50)
 //:
 //: Now, the signal remains alive, it didn't complete nor fail and wasn't interrupted.
 //:
-print("---------------(5)---------------")
-observer1.sendCompleted()
+    print("---------------(5)---------------")
+    observer1.sendCompleted()
 //: Now it completed. You could try sending values again to the observer but they will not go anymore through the `observeNext` blocks because the signal already completed.
-observer1.sendNext(9)
+    observer1.sendNext(9)
 //:
 //: These were the main concepts for RAC release 1 and RAC release 2. In RAC3 (RAC release 3), there were ground-breaking changes to the framework and the notion of ***SignalProducer*** was introduced.
 //:
