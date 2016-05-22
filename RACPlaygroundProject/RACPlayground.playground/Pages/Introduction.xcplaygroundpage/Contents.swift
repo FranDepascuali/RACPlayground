@@ -62,3 +62,5 @@
 //:* stream: ***Next("Hello") -> Next("World") -> Interrupted*** (Two values and then an Interrupted).
 //:* stream: ***Next(true) -> Failed*** (A value and a Failed event).
 //:* stream: ***Completed*** (Just a Completed event).
+//:
+//: [Next](@next)
