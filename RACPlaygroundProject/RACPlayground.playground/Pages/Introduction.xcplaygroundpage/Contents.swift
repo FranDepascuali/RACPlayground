@@ -7,7 +7,9 @@
 //:* [Use Case](UseCase)
 //:* [Properties](Properties)
 //:* [Actions](Actions)
+//:* [Play!](Play!)
 //:* [Chaining Operations](ChainingOperations)
+//:* [Memory Management](MemoryManagement)
 //:* [Advanced Tips](AdvancedTips)
 //: ----
 //: ## Introduction

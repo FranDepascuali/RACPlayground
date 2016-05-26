@@ -14,6 +14,7 @@
 		F810046C1CD9297C001CE119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F810046A1CD9297C001CE119 /* LaunchScreen.storyboard */; };
 		F810048D1CD92E3A001CE119 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81004841CD92C58001CE119 /* ReactiveCocoa.framework */; };
 		F81004AB1CD92E79001CE119 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F810049E1CD92E6C001CE119 /* Result.framework */; };
+		F84C948B1CF6529D00753549 /* Rex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84C94821CF6526100753549 /* Rex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,55 @@
 			remoteGlobalIDString = D454807C1A957361009D7229;
 			remoteInfo = "Result-iOS";
 		};
+		F84C947D1CF6526100753549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F84C94731CF6526100753549 /* Rex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D86E77A91AFEE646004BF23D;
+			remoteInfo = "Rex-Mac";
+		};
+		F84C947F1CF6526100753549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F84C94731CF6526100753549 /* Rex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D86E77AA1AFEE646004BF23D;
+			remoteInfo = "RexTests-Mac";
+		};
+		F84C94811CF6526100753549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F84C94731CF6526100753549 /* Rex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D86E77AB1AFEE646004BF23D;
+			remoteInfo = "Rex-iOS";
+		};
+		F84C94831CF6526100753549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F84C94731CF6526100753549 /* Rex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D86E77AC1AFEE646004BF23D;
+			remoteInfo = "RexTests-iOS";
+		};
+		F84C94851CF6526100753549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F84C94731CF6526100753549 /* Rex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8715DB01C21123E005F4191;
+			remoteInfo = "Rex-tvOS";
+		};
+		F84C94871CF6526100753549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F84C94731CF6526100753549 /* Rex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8715DD11C21160A005F4191;
+			remoteInfo = "RexTests-tvOS";
+		};
+		F84C94891CF6526100753549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F84C94731CF6526100753549 /* Rex.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8715D941C210F97005F4191;
+			remoteInfo = "Rex-watchOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +192,7 @@
 		F81004731CD92BCE001CE119 /* RACPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RACPlayground.playground; sourceTree = "<group>"; };
 		F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F810048E1CD92E6B001CE119 /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F84C94731CF6526100753549 /* Rex.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rex.xcodeproj; path = Carthage/Checkouts/Rex/Rex.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F84C948B1CF6529D00753549 /* Rex.framework in Frameworks */,
 				F81004AB1CD92E79001CE119 /* Result.framework in Frameworks */,
 				F810048D1CD92E3A001CE119 /* ReactiveCocoa.framework in Frameworks */,
 			);
@@ -178,6 +230,7 @@
 			children = (
 				F810048E1CD92E6B001CE119 /* Result.xcodeproj */,
 				F81004761CD92C58001CE119 /* ReactiveCocoa.xcodeproj */,
+				F84C94731CF6526100753549 /* Rex.xcodeproj */,
 				F81004611CD9297C001CE119 /* AppDelegate.swift */,
 				F81004631CD9297C001CE119 /* ViewController.swift */,
 				F81004651CD9297C001CE119 /* Main.storyboard */,
@@ -213,6 +266,20 @@
 				F81004A41CD92E6C001CE119 /* Result-tvOSTests.xctest */,
 				F81004A61CD92E6C001CE119 /* Result.framework */,
 				F81004A81CD92E6C001CE119 /* Result-watchOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F84C94741CF6526100753549 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F84C947E1CF6526100753549 /* Rex.framework */,
+				F84C94801CF6526100753549 /* RexTests-Mac.xctest */,
+				F84C94821CF6526100753549 /* Rex.framework */,
+				F84C94841CF6526100753549 /* RexTests-iOS.xctest */,
+				F84C94861CF6526100753549 /* Rex.framework */,
+				F84C94881CF6526100753549 /* RexTests-tvOS.xctest */,
+				F84C948A1CF6526100753549 /* Rex.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,6 +340,10 @@
 				{
 					ProductGroup = F810048F1CD92E6B001CE119 /* Products */;
 					ProjectRef = F810048E1CD92E6B001CE119 /* Result.xcodeproj */;
+				},
+				{
+					ProductGroup = F84C94741CF6526100753549 /* Products */;
+					ProjectRef = F84C94731CF6526100753549 /* Rex.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -379,6 +450,55 @@
 			fileType = wrapper.cfbundle;
 			path = "Result-watchOSTests.xctest";
 			remoteRef = F81004A71CD92E6C001CE119 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F84C947E1CF6526100753549 /* Rex.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rex.framework;
+			remoteRef = F84C947D1CF6526100753549 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F84C94801CF6526100753549 /* RexTests-Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "RexTests-Mac.xctest";
+			remoteRef = F84C947F1CF6526100753549 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F84C94821CF6526100753549 /* Rex.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rex.framework;
+			remoteRef = F84C94811CF6526100753549 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F84C94841CF6526100753549 /* RexTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "RexTests-iOS.xctest";
+			remoteRef = F84C94831CF6526100753549 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F84C94861CF6526100753549 /* Rex.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rex.framework;
+			remoteRef = F84C94851CF6526100753549 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F84C94881CF6526100753549 /* RexTests-tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "RexTests-tvOS.xctest";
+			remoteRef = F84C94871CF6526100753549 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F84C948A1CF6526100753549 /* Rex.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rex.framework;
+			remoteRef = F84C94891CF6526100753549 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
