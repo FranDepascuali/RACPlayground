@@ -31,7 +31,7 @@ The tutorial is made with markdown. You should go to `File Inspector` and activa
 ### Boostrap ###
 
 1. Clone the project.
-2. Run bootstrap (./bootstrap). It will update and build RAC dependencies.
+2. Run bootstrap (`./bootstrap`). It will update and build RAC dependencies.
 3. Open `RACPlaygroundWorkspace.xcworkspace`.
 4. In xcode, build `RACPlaygroundProject`.
 <img width="861" alt="screen shot 2016-05-25 at 21 51 06" src="https://cloud.githubusercontent.com/assets/12101394/15560554/08b8072e-22c3-11e6-8107-0bd268db8b5a.png">
