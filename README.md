@@ -1,5 +1,7 @@
 ## RACPlayground ##
 
+![Swift 2.2.x](https://img.shields.io/badge/Swift-2.2.x-orange.svg)
+
 This is a small project to have a playground with [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) and [Result](https://github.com/antitypical/Result) working.
 
 It also contains a tutorial for learning ReactiveCocoa (version 4.x).
