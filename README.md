@@ -18,8 +18,8 @@ The tutorial is divided into the following pages:
 6. [Actions](./RACPlaygroundProject/RACPlayground.playground/Pages/Actions.xcplaygroundpage)
 7. [Play!](./RACPlaygroundProject/RACPlayground.playground/Pages/Play!.xcplaygroundpage)
 8. [Chaining Operations](./RACPlaygroundProject/RACPlayground.playground/Pages/ChainingOperations.xcplaygroundpage)
-9. [Memory Management](./RACPlaygroundProject/RACPlayground.playground/Pages/MemoryManagement.xcplaygroundpage)
-10. [Advanced Tips](./RACPlaygroundProject/RACPlayground.playground/Pages/AdvancedTips.xcplaygroundpage)
+9. [Memory Management](./RACPlaygroundProject/RACPlayground.playground/Pages/MemoryManagement.xcplaygroundpage) (pending)
+10. [Advanced Tips](./RACPlaygroundProject/RACPlayground.playground/Pages/AdvancedTips.xcplaygroundpage) (pending)
 
 ### Visualization ###
 
