@@ -26,8 +26,15 @@ The tutorial is divided into the following pages:
 
 The tutorial is made with markdown. You should go to `File Inspector` and activate `Render Documentation`.
 
-<img width="974" alt="screen shot 2016-05-25 at 21 46 17" src="https://cloud.githubusercontent.com/assets/12101394/15560486/69855bf2-22c2-11e6-98d5-16377ddbd016.png">
+### Screenshots ###
+#### Index ####
+<img width="1018" alt="screen shot 2016-06-25 at 19 48 57" src="https://cloud.githubusercontent.com/assets/12101394/16359517/f92cd560-3b0d-11e6-9bd3-7d26bb692ed0.png">
 
+#### Framework Overview ####
+<img width="1015" alt="screen shot 2016-06-25 at 19 50 18" src="https://cloud.githubusercontent.com/assets/12101394/16359525/38939de2-3b0e-11e6-8fa6-65955a28eeef.png">
+
+#### Properties ####
+<img width="1005" alt="screen shot 2016-06-25 at 19 50 41" src="https://cloud.githubusercontent.com/assets/12101394/16359526/3afae6a8-3b0e-11e6-9e8f-a87ba1627a74.png">
 
 ### Boostrap ###
 
