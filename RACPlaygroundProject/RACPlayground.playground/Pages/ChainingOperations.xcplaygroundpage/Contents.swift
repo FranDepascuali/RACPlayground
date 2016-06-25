@@ -73,11 +73,11 @@ let chainedProducers2 = _currentUser.producer.flatMap(.Latest, transform: fetchT
 chainedProducers2.startWithNext { tweets in
     print("Tweets: \(tweets)")
 }
-print("---------------(2)---------------")
+print("---------------(3)---------------")
 //: It printed the tweets for john. Now, suppose that we change the user john to the user emily. We want it to fetch the tweets for emily.
 _currentUser.value = User(name: "emily")
 //: Great! When the user changed to "emily", it fetched the tweets for emily. One more time:
-print("---------------(2)---------------")
+print("---------------(4)---------------")
 _currentUser.value = User(name: "tyrion")
 //:
 //: I will now explain what flatMap do.
@@ -111,7 +111,7 @@ let (tyrionTweets, tyrionTweetsObserver) = SignalProducer<Tweet, NoError>.buffer
 //:
 //: What I will do is to manipulate these streams to show the different between .Latest, .Concat, .Merge
 
-print("---------------(2)---------------")
+print("---------------(5)---------------")
 print("strategy: .Latest")
 
 let latestChainedProducers = currentUser.flatMap(.Latest) { user -> SignalProducer<Tweet, NoError> in
@@ -146,7 +146,7 @@ tyrionTweetsObserver.sendNext(Tweet(content: "Hello! I'm tyrion"))
 //:
 latestdisposable.dispose()
 
-print("---------------(2)---------------")
+print("---------------(6)---------------")
 print("strategy: .Merge")
 let mergeChainedProducers = currentUser.flatMap(.Merge) { user -> SignalProducer<Tweet, NoError> in
     if user.name == "emily" {
@@ -176,7 +176,7 @@ tyrionTweetsObserver.sendNext(Tweet(content: "Hello! I'm tyrion"))
 //: We are using .Merge strategy, so all the tweets emitted from both Tyrion and Emily go to the outer producer, in the order in which they both arrived.
 
 mergedDisposable.dispose()
-print("---------------(2)---------------")
+print("---------------(7)---------------")
 print("strategy: .Concat")
 
 let concatChainedProducers = currentUser.flatMap(.Concat) { user -> SignalProducer<Tweet, NoError> in
@@ -230,15 +230,19 @@ producer1.startWithNext { _ in
 //:
 //: ----
 //: ### Further Info
-//: Just a detail. If you've noticed it, if you take the strategy out from flatMap() it looks like the flatMap from Optional. It also looks similar to the flatMap() from array.
+//: Just a detail. If you've noticed it, if you ignore the strategy for flatMap() it looks like the flatMap from Optional. It also looks similar to the flatMap() from array.
 //:
 //: Look at this:
 //:
-//: Optional: 
+//: **Optional**:
+//:
 //: public func flatMap<U>(f: Wrapped -> U?) -> U?
 //:
-//: Array:
+//: **Array**:
+//:
 //: public func flatMap<T>(transform: Element -> [T]) rethrows -> [T]
+//:
+//: **RAC**:
 //:
 //: public func flatMap<U>(
 //:    strategy: ReactiveCocoa.FlattenStrategy,
@@ -247,6 +251,6 @@ producer1.startWithNext { _ in
 //: Optional, Array, SignalProducer, etc... are all "contexts" for which we can apply operations.
 //:
 //: flatMap receives a function will take an element, applies a transformation to it and returns it in the same context (Optional, Array, SignalProducer, etc...).
-//: [This post](http://www.mokacoding.com/blog/functor-applicative-monads-in-pictures/) is really GREAT, one of the best posts I've read.
+//: [This post](http://www.mokacoding.com/blog/functor-applicative-monads-in-pictures/) is really GREAT to understand flatMap, one of the best posts I've read.
 //:
-print("")
+//: [Next](@next)

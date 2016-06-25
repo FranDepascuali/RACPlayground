@@ -1,30 +1,31 @@
 //: [Previous](@previous)
-
 import Result
 import ReactiveCocoa
 
-//: ### Signals
-//: It would be great if we could name (or encapsulate) these streams of values. Here is where **Signal** appears: it represents that stream of values. In other words ***Signal is an stream of events***, just like the ones presented before.
+//: # Signals
+//: It would be great if we could name (or encapsulate) these streams of values.
 //:
-//:* signal1: ***Next(5) -> Next(3) -> Next(7) -> Completed*** (Three values and then a Completed).
-//:* signal2: ***Next("Hello") -> Next("World") -> Interrupted*** (Two values and then an Interrupted).
-//:* signal3: ***Next(true) -> Failed*** (A value and a Failed event).
-//:* signal4: ***Completed*** (Just a Completed event).
+//: Here is where **Signal** appears: it represents a particular stream of values. In other words ***Signal is an stream of events***, just like the ones presented before.
+//:
+//:* **signal1**: ***Next(5) -> Next(3) -> Next(7) -> Completed*** (Three values and then a Completed).
+//:* **signal2**: ***Next("Hello") -> Next("World") -> Interrupted*** (Two values and then an Interrupted).
+//:* **signal3**: ***Next(true) -> Failed*** (A value and a Failed event).
+//:* **signal4**: ***Completed*** (Just a Completed event).
 //:
 //: I will write something that may seem obvious, but signals should offer two things:
-//:* The capability of observing those events (I'll refer to those events as the events that a signal emits).
+//:* The capability of observing the events (I'll refer to those events as the events that a signal emits).
 //:* Functions to ***compose and transform*** those events.
 //:
 //: So let's play with some of those functions
 //:
 //: First of all, I will use a function of signals, pipe, that let us create a signal and send values through that signal. You can read about it in the [Framework Overview](https://github.com/ReactiveCocoa/ReactiveCocoa/blob/master/Documentation/FrameworkOverview.md).
 //:
-//: If I could, I would avoid using pipe() here, but we haven't other way to manually create and control a signal. In a real app, one should avoid creating signal with pipe().
+//: If I could, I would avoid using *pipe()* here, but we haven't other way to manually create and control a *signal*. In a real app, we should avoid creating a signal with *pipe()* whenever possible.
 //:
     let (signal1, observer1) = Signal<Int, NoError>.pipe()
 //: pipe() provides:
-//:* A ***signal***: In this case signal1 which is of type ***Signal<Int, NoError>***, this means that it can emit ***Next*** events with type ***Int***, and ***Failed*** events with type ***NoError***.
-//:* An ***observer***: In this case observer1 which is of type ***Observer<Int, NoError>***. This observer is where we will send an *Int* value and the signal will emit that value.
+//:* A ***signal***: In this case *signal1* which is of type ***Signal<Int, NoError>***, this means that it can emit ***Next*** events with values of type ***Int***, and ***Failed*** events with errors of type ***NoError***.
+//:* An ***observer***: In this case *observer1* which is of type ***Observer<Int, NoError>***. This observer is where we will send an *Int* value and the signal will emit that value.
 //:
 //: Let's see how:
 //:
@@ -54,9 +55,9 @@ import ReactiveCocoa
 //:
 //: Open the console again. Why did we see 7 and 10? Because we are observing the signal twice: in the first *ObserveNext* we printed the value, in the second one we printed the value + 3.
 //:
-//: Here we grab another concept: __a signal emits a stream of values and it can have multiples observer. They all observe the SAME(!!!) stream of values. That last sentences is very important. The signal emits a single stream that every observer of that signal will observe (the stream is unique and it is the same for every observer). I know I'm being repetitive, but this is very important to prevent confusion with other following concepts. I'll get back into this later.__
+//: > __Here we grab another concept: a signal emits a stream of values and it can have multiples observer. They all observe the SAME(!!!) stream of values. That last sentences is very important. The signal emits a single stream that every observer of that signal will observe (the stream is unique and it is the same for every observer). I know I'm being repetitive, but this is very important to prevent confusion with other following concepts. I'll get back into this later.__
 //:
-//: Now, let's apply some transformations that signals offer us:
+//: Now, let's apply some transformations that signals offers to us:
 //:
 //: One of the most important is map: It let us provide a transformation to the Next values emitted by the signal.
 //:
@@ -90,9 +91,9 @@ import ReactiveCocoa
 //:1. 50 for the first observer of ***signal1***.
 //:2. 53 for the second observer of ***signal1***.
 //:3. 50 for the observer of ***signal2***.
-//:4. 100 for the last observer added.
+//:4. 100 for the last observer added (that maps the value to $0 * 2).
 //:
-//: Now, the signal remains alive, it didn't complete nor fail and wasn't interrupted.
+//: > The signal remains alive because it didn't complete nor fail and wasn't interrupted. These three type of events (and also when we deallocate an object that has a unique reference to the signal) are the ones that terminates the signal.
 //:
     print("---------------(5)---------------")
     observer1.sendCompleted()

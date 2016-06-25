@@ -96,6 +96,3 @@ public class Foo2 {
     }
     
 }
-
-
-//: [Next](@next)

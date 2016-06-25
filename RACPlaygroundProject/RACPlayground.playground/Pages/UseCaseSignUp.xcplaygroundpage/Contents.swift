@@ -1,9 +1,9 @@
 //: [Previous](@previous)
-
 import UIKit
 import Result
 import ReactiveCocoa
-
+//: # Use Case
+//:
 //: Right now, we've seen ***Events***, ***Signals*** and ***SignalProducers***. We will now see a real aplications of ***SignalProducers***.
 //:
 //: Let's assume we are building an application and we are going to develop the sign up requirement. I'll avoid using RAC first.
@@ -14,7 +14,7 @@ import ReactiveCocoa
         public let email: String
         
     }
-//: And the following UserRepositoryType protocol:
+//: And the following **UserRepositoryType** protocol:
     public protocol UserRepositoryType {
         
         func signUp(
@@ -24,8 +24,16 @@ import ReactiveCocoa
             onFailure: NSError -> ())
 
     }
-//: signUp receives an email, a password and a function to be call in successful sign up and another one for failure.
-//: We can now provide an implementation for UserRepository:
+//: **signUp** receives an email, a password and a (callback) function to be call in successful sign up and another one for failure.
+//:
+//: Here we are mocking an **ExternalPersistanceService**, it will be a real one in production.
+    public class MockExternalPersistanceService {
+        
+        func signUp(email: String, password: String, callBack: (User?, NSError?) -> ()) {
+            callBack(User(email: email), nil)
+        }
+    }
+//: We can now provide an implementation for **UserRepository**:
     public final class UserRepository: UserRepositoryType {
         
         public func signUp(email: String, password: String, onSuccess: User -> (), onFailure: NSError -> ()) {
@@ -38,13 +46,6 @@ import ReactiveCocoa
                 }
             }
             
-        }
-    }
-//: Here we are mocking the ExternalPersistanceService, it will be a real one in production.
-    public class MockExternalPersistanceService {
-        
-        func signUp(email: String, password: String, callBack: (User?, NSError?) -> ()) {
-            callBack(User(email: email), nil)
         }
     }
 
@@ -67,7 +68,7 @@ import ReactiveCocoa
         public func signUp(email: String, password: String) -> SignalProducer<User, NSError> {
             return SignalProducer { observer, disposable in
                 MockExternalPersistanceService()
-                    .signUp("user@gmail.com", password: "password") { maybeUser, maybeError in
+                    .signUp(email, password: password) { maybeUser, maybeError in
                         if let error = maybeError {
                             observer.sendFailed(error)
                         } else if let user = maybeUser {
@@ -81,7 +82,7 @@ import ReactiveCocoa
 
 //: Here I'm introducing how we initialize SignalProducers (remember that in the previous page we used buffer()). The difference with buffer is that here we don't have an observer outside the initialization of the SignalProducer to send values. 
 //:
-//: ***WHEN STARTED*** this SignalProducer will make the (asynchronous) request to sign up and then send a new user (or an error if it failed).
+//: ***WHEN STARTED(!!!)*** this SignalProducer will make the (asynchronous) request to sign up and then send a new user (or an error if it failed).
 //: For example, we can do this
     let signUpProducer = RACUserRepository().signUp("newUser@gmail.com", password: "password")
 //: Look at the console. Nothing printed out. This is because we didn't start the producer yet.
@@ -97,7 +98,9 @@ import ReactiveCocoa
 //:
 //: You maybe asking yourself why we used SignalProducer instead of Signal?
 //:
-//: Because with the producer, we decide when to start it. If we have a signal, as soon as we initialize it, it executed the closure. Look at this:
+//: Because with the producer, we decide when to start it. If we have a signal, as soon as we initialize it, it executes the closure. 
+//:
+//: Look at this:
     public final class WrongRACUserRepository {
         
         public func signUp(email: String, password: String) -> Signal<User, NSError> {
@@ -121,8 +124,8 @@ import ReactiveCocoa
     print("---------------(3)---------------")
 
     let signalSignUp = WrongRACUserRepository().signUp("user@gmail.com", password: "password")
-    signalSignUp.observeNext {
-        user in print("user")
+    signalSignUp.observeNext { user in
+        print("user")
     }
 //: Why didn't it print a value?
 //:
@@ -130,9 +133,9 @@ import ReactiveCocoa
 //:
 //: Usually, we want to sign up when pressing a button, so we would have a producer like the one before and start it when pressing the button.
 //:
-//: This last example represents why Signals are "hot" and SignalProducers are "cold".
+//: > This last example represents the concepts of Signal being "hot" and SignalProducers being "cold".
 //:
-//: We already Know what ***Events***, ***Signal*** and ***SignalProducers*** are and we saw a use case for ***SignalProducers***.
+//: We already Kkow what ***Events***, ***Signal*** and ***SignalProducer*** are and we saw a use case for ***SignalProducers***.
 //: The next concepts that we will learn are ***MutableProperty*** and ***AnyProperty***.
 //:
 //: [Next](@next)

@@ -1,15 +1,15 @@
 //: [Previous](@previous)
 import Result
 import ReactiveCocoa
-//: ### SignalProducers
+//: # Signal Producer
 //:
-//: Go again to the [Framework Overview](https://github.com/ReactiveCocoa/ReactiveCocoa/blob/master/Documentation/FrameworkOverview.md) and read the ***Signal Producer*** section.
+//: Go again to the [**Framework Overview**](https://github.com/ReactiveCocoa/ReactiveCocoa/blob/master/Documentation/FrameworkOverview.md) and read the [**Signal Producer**](https://github.com/ReactiveCocoa/ReactiveCocoa/blob/master/Documentation/FrameworkOverview.md#signal-producers) section.
 //:
 //: You are done. Good bye!
 //:
-//: I was joking. Here I am. SignalProducer is a difficult concept to grab first, but I promise it will make sense.
+//: I was joking. Here I am. SignalProducer is a difficult concept to grab at a first glance, but I promise it will make sense.
 //:
-//: The problem that we encounter with *signals* is that there some occasions in which we don't want to observe the signal when we call ***observeNext***. We want to start observing that signal in another moment. This is why `SignalProducer` was created:
+//: The problem that we encounter with *signals* is that there some occasions in which we don't want to observe the signal when we call *observeNext*. We want to start observing that signal in another moment. This is why `SignalProducer` was created:
 //:
 //:__A signal producer, represented by the SignalProducer type, creates signals and performs side effects.__
 //:
@@ -40,13 +40,14 @@ import ReactiveCocoa
 //:
 //: Ahm, so it is the same as ***Signal***, right?
 //:
-//: __ABSOLUTELY NOT! Though it seems to be the same, different things are going on here: Do you remember how a Signal emitted a UNIQUE stream of values and every observer saw the SAME stream? SignalProducers emit different streams of values each time we start them. In this case, TWO streams of values are created.__
+//: __ABSOLUTELY NOT!__ 
+//: > __Though it seems to be the same, different things are going on here: Do you remember how a Signal emitted a UNIQUE stream of values and every observer saw the SAME stream? SignalProducers emit different streams of values each time we start them. In this case, TWO streams of values are created.__
 //:
-//: __Why do SignalProducer emit DIFFERENT streams of values? Because a SignalProducer is a recipee to create new signals. So each SignalProducer creates a new signal every time they are started.__
+//: Why do *SignalProducer* emit **DIFFERENT** streams of values? Because *SignalProducer* is a recipee to create new signals. So each *SignalProducer* creates a new signal every time it is started.
 //:
-//: In this case, we are creating two ***DIFFERENT*** streams of values, one for each producer:
-//:1. Next(7) - Next(11) - Next(0)
-//:2. Next(0)
+//: In the last example, we created two ***DIFFERENT*** streams of values, one for each producer:
+//:1. **Next(7) - Next(11) - Next(0)**
+//:2. **Next(0)**
 //:
 //: If we had a signal instead of a producer, it would emit a single stream of values:
 //:

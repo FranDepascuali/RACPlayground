@@ -6,13 +6,14 @@ import ReactiveCocoa
 import Rex
 
 //:
-//: ## Play!
+//: # Play!
 //:
 //: We've learned the following concepts:
-//: * Event
-//: * Signal
-//: * SignalProducer
-//: * Action
+//: * **Event**
+//: * **Signal**
+//: * **SignalProducer**
+//: * **Properties**
+//: * **Action**
 //:
 //: And saw a use case for SignalProducer (UserRepository) and for Action (binding UIButtons).
 //:
