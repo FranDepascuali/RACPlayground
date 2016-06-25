@@ -11,15 +11,16 @@ It also contains a tutorial for learning ReactiveCocoa (version 4.x).
 The tutorial is divided into the following pages:
 
 1. [Introduction](./RACPlaygroundProject/RACPlayground.playground/Pages/Introduction.xcplaygroundpage)
-2. [Signal](./RACPlaygroundProject/RACPlayground.playground/Pages/Signal.xcplaygroundpage)
-3. [SignalProducer](./RACPlaygroundProject/RACPlayground.playground/Pages/SignalProducer.xcplaygroundpage)
-4. [Use Case](./RACPlaygroundProject/RACPlayground.playground/Pages/UseCase.xcplaygroundpage)
-5. [Properties](./RACPlaygroundProject/RACPlayground.playground/Pages/Properties.xcplaygroundpage)
-6. [Actions](./RACPlaygroundProject/RACPlayground.playground/Pages/Actions.xcplaygroundpage)
-7. [Play!](./RACPlaygroundProject/RACPlayground.playground/Pages/Play!.xcplaygroundpage)
-8. [Chaining Operations](./RACPlaygroundProject/RACPlayground.playground/Pages/ChainingOperations.xcplaygroundpage)
-9. [Memory Management](./RACPlaygroundProject/RACPlayground.playground/Pages/MemoryManagement.xcplaygroundpage) (pending)
-10. [Advanced Tips](./RACPlaygroundProject/RACPlayground.playground/Pages/AdvancedTips.xcplaygroundpage) (pending)
+2. [Framework Overview](./RACPlaygroundProject/RACPlayground.playground/Pages/FrameworkOverview.xcplaygroundpage)
+3. [Signal](./RACPlaygroundProject/RACPlayground.playground/Pages/Signal.xcplaygroundpage)
+4. [SignalProducer](./RACPlaygroundProject/RACPlayground.playground/Pages/SignalProducer.xcplaygroundpage)
+5. [Use Case: Sign up](./RACPlaygroundProject/RACPlayground.playground/Pages/UseCaseSignUp.xcplaygroundpage)
+6. [Properties](./RACPlaygroundProject/RACPlayground.playground/Pages/Properties.xcplaygroundpage)
+7. [Actions](./RACPlaygroundProject/RACPlayground.playground/Pages/Actions.xcplaygroundpage)
+8. [Use Case: Sign up UI](./RACPlaygroundProject/RACPlayground.playground/Pages/UseCaseButtons.xcplaygroundpage)
+9. [Play!](./RACPlaygroundProject/RACPlayground.playground/Pages/Play!.xcplaygroundpage)
+10. [Chaining Operations](./RACPlaygroundProject/RACPlayground.playground/Pages/ChainingOperations.xcplaygroundpage)
+11. [Memory Management](./RACPlaygroundProject/RACPlayground.playground/Pages/MemoryManagement.xcplaygroundpage) (pending)
 
 ### Visualization ###
 
