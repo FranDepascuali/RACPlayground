@@ -20,7 +20,7 @@ The tutorial is divided into the following pages:
 8. [Use Case: Sign up UI](./RACPlaygroundProject/RACPlayground.playground/Pages/UseCaseButtons.xcplaygroundpage)
 9. [Play!](./RACPlaygroundProject/RACPlayground.playground/Pages/Play!.xcplaygroundpage)
 10. [Chaining Operations](./RACPlaygroundProject/RACPlayground.playground/Pages/ChainingOperations.xcplaygroundpage)
-11. [Memory Management](./RACPlaygroundProject/RACPlayground.playground/Pages/MemoryManagement.xcplaygroundpage) (pending)
+11. [Memory Management](./RACPlaygroundProject/RACPlayground.playground/Pages/MemoryManagement.xcplaygroundpage)
 
 ### Visualization ###
 
