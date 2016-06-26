@@ -46,3 +46,4 @@ The tutorial is made with markdown. You should go to `File Inspector` and activa
 <img width="861" alt="screen shot 2016-05-25 at 21 51 06" src="https://cloud.githubusercontent.com/assets/12101394/15560554/08b8072e-22c3-11e6-8107-0bd268db8b5a.png">
 6. You should be able to use [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) and [Result](https://github.com/antitypical/Result) in `RACPlayground.playground`.
 
+* Please, make sure that you open the `RACPlaygroundWorkspace` and then open the playground (inside the workspace). It will not work if you close the workspace!
